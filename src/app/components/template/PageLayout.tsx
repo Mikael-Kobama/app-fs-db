@@ -4,7 +4,7 @@ export interface PageProps {
   children: any;
 }
 
-export default function Page(props: PageProps) {
+export default function PageLayout(props: PageProps) {
   return (
     <div className="flex ">
       <Menu />

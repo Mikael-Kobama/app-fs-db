@@ -1,9 +1,13 @@
 import PageLayout from "@/app/components/template/PageLayout";
+import Title from "@/app/components/template/Title";
+import UserList from "@/app/components/user/UserList";
+import { IconUser } from "@tabler/icons-react";
 
 export default function Page() {
   return (
     <PageLayout>
-      <h1>Usuários</h1>
+      <Title icon={IconUser} first="Usuários" second="Cadastro de usuários" />
+      <UserList />
     </PageLayout>
   );
 }

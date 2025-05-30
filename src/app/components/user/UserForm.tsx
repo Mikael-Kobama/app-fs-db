@@ -2,8 +2,8 @@ import { User } from "@/core/model/User";
 import TextInput from "../shared/TextInput";
 
 export interface UserFormProps {
-  user: User;
-  onChange: (user: User) => void;
+  user: Partial<User>;
+  onChange: (user: Partial<User>) => void;
   onSave: () => void;
   onCancel: () => void;
 }

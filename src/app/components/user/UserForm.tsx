@@ -6,6 +6,7 @@ export interface UserFormProps {
   onChange: (user: Partial<User>) => void;
   onSave: () => void;
   onCancel: () => void;
+  onDelete: () => void;
 }
 
 export default function UserForm(props: UserFormProps) {
@@ -35,18 +36,26 @@ export default function UserForm(props: UserFormProps) {
           props.onChange?.({ ...props.user, password: e.target.value })
         }
       />
-      <div className="flex gap-5 ">
+      <div className="flex justify-between">
+        <div className="flex gap-5 ">
+          <button
+            className="bg-blue-500 px-4 py-2 rounded-md"
+            onClick={props.onSave}
+          >
+            Save
+          </button>
+          <button
+            className="bg-zinc-500 px-4 py-2 rounded-md"
+            onClick={props.onCancel}
+          >
+            Cancel
+          </button>
+        </div>
         <button
-          className="bg-blue-500 px-4 py-2 rounded-md"
-          onClick={props.onSave}
+          className="bg-red-500 px-4 py-2 rounded-md"
+          onClick={props.onDelete}
         >
-          Save
-        </button>
-        <button
-          className="bg-zinc-500 px-4 py-2 rounded-md"
-          onClick={props.onCancel}
-        >
-          Cancel
+          Excluir
         </button>
       </div>
     </div>

@@ -19,7 +19,7 @@ export default function Page() {
           onChange={changeUser}
           onSave={save}
           onCancel={() => changeUser(null)}
-          delete={deleteUser}
+          onDelete={deleteUser}
         />
       ) : (
         <>

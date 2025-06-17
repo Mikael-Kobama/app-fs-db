@@ -12,7 +12,7 @@ export default function useUsers() {
 
   async function save() {
     if (!user) return;
-    Backend.users.save(user);
+    await Backend.users.save(user);
     const users = await Backend.users.get();
     setUsers(users);
     setUser(null);

@@ -4,11 +4,11 @@ PRAGMA foreign_keys=OFF;
 CREATE TABLE "new_User" (
     "id" TEXT NOT NULL PRIMARY KEY,
     "email" TEXT NOT NULL,
-    "name" TEXT NOT NULL,
-    "password" TEXT NOT NULL,
+    "nome" TEXT NOT NULL,
+    "senha" TEXT NOT NULL,
     "active" BOOLEAN NOT NULL DEFAULT true
 );
-INSERT INTO "new_User" ("email", "id", "name", "password") SELECT "email", "id", "name", "password" FROM "User";
+INSERT INTO "new_User" ("email", "id", "nome", "senha") SELECT "email", "id", "nome", "senha" FROM "User";
 DROP TABLE "User";
 ALTER TABLE "new_User" RENAME TO "User";
 CREATE UNIQUE INDEX "User_email_key" ON "User"("email");

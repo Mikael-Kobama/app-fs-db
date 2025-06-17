@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <PageLayout className="flex flex-col gap-10">
       <Title icon={IconUser} first="Usuários" second="Cadastro de usuários" />
-      {/* <UserList /> */}
+
       {user ? (
         <UserForm
           user={user}

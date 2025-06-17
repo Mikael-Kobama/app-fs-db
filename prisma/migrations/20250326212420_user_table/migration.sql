@@ -2,8 +2,8 @@
 CREATE TABLE "User" (
     "id" TEXT NOT NULL PRIMARY KEY,
     "email" TEXT NOT NULL,
-    "name" TEXT NOT NULL,
-    "password" TEXT NOT NULL
+    "nome" TEXT NOT NULL,
+    "senha" TEXT NOT NULL
 );
 
 -- CreateIndex
